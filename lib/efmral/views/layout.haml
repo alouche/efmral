@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta(charset="utf-8")
+    %title efmral - ephemeral secrets
+    %link(rel="stylesheet" href="/css/styles.css")
+    %script(src="/js/block-tea.js")
+    %script(src="/js/main.js")
+  %body
+    %header
+      %h1 efmral /e-phe-me-ral/
+      %h2 - safely share a note -
+    %section#main
+      = yield
+    %footer
+      #footline
+        %p
+          Version:
+          = $version
+        %p
+          %a{:href => "http://alouche.net"} Ali Abbas
+          |
+          %a{:href => "http://github.com/alouche/efmral"} Source Code
+          |
+          %a{:href => "http://efemral.alouche.net/doc"} Documentation
+      %hr
+      #documentation
+        %h1 Documentation
+        %h2 [-] Creating a Note
+        %h3 When creating a note, it is recommended to use an encryption key even though optional. Using an encryption key secures transmission of the message across the network but also guarantees that an Administrator will not be able to read the saved notes directly by probing the database since the encryption key is never saved nor transmitted.
+        %h3 Once the note is saved, a url ID is generated, which you can then communicate to the intended user.
+        %h2 [-] Reading a Note
+        %h3 The note can only be opened once. If the note is encrypted, you may provide a decryption key. Be aware that if provided a wrong decryption key, you will not be able to recover the original note, unless you have a copy of the encrypted note. 
+          

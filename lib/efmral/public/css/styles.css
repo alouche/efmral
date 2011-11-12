@@ -1,0 +1,134 @@
+/*
+  This css file belongs to the efmral codebase.
+  Copyright (C) 2011, Ali Abbas <ali@alouche.net>
+
+  efmral is licensed under the GNU General Public License, version 3. A copy of
+  the license text can be found in the file COPYING in the source distribution.
+*/
+
+
+@font-face {
+  font-family: 'Terminal Dosis';
+  src: url(terminaldosis.ttf);
+}
+
+
+body {
+  font-size: 67.5%;
+  font-family: 'Terminal Dosis', sans-serif;
+}
+
+
+header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+footer hr {
+  margin-top: 30px;
+}
+
+footer #footline {
+  padding-top: 30px;
+  text-align: center;
+}
+
+footer #documentation {
+  text-align: left;
+}
+
+#box {
+  margin-right:auto;
+  margin-left:auto;
+  width: 50em;
+}
+
+/* Style Definition for share.haml */
+
+#share_box {
+  margin-right:auto;
+  margin-left:auto;
+  width: 50em;
+}
+
+#share_box h3 {
+  color: #E01B1B;
+}
+
+/* Style Definition for secret.haml */
+
+#secret_msg {
+  width: 25.8em;
+  height: 300px;
+  border: 2px solid #E01B1B;
+  padding: 5px;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 20px;
+}
+
+#secret_key {
+  width: 39em;
+  height: 10px;
+  border: 2px solid #E01B1B;
+  padding: 5px;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 10px;
+}
+
+/* Style Definition for new.haml */
+
+#new_msg {
+  width: 25.8em;
+  height: 300px;
+  border: 2px solid #cccccc;
+  padding: 5px;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 20px;
+}
+
+#new_key {
+  width: 40em;
+  height: 10px;
+  border: 2px solid #cccccc;
+  padding: 2px;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 10px;
+}
+
+#submit_button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size:10px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #ffffff;
+}
+
+#submit_button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color:#dfdfdf;
+}
+
+#submit_button:active {
+  position:relative;
+  top:1px;
+}

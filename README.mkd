@@ -6,7 +6,7 @@ efmral - pronounced "e-phe-me-ral" is a small sinatra rake middleware applicatio
 
 To provide a balance between simplicity and security.
 
-It is known that across coorporation, confidential informations are often communicated by email, chats which leave a trace log for anyone with rogue admin rights or a malicious attacker to retrieve this information at a later time.
+It is known that across corporation, confidential informations are often communicated by email, chats which leave a trace log for anyone with rogue admin rights or a malicious attacker to retrieve this information at a later time.
 
 Demo [http://efmral.alouche.net][1] - Screencast [@youtube][2]
 

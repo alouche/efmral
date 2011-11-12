@@ -1,0 +1,10 @@
+---
+  address: 0.0.0.0
+  port: 8080
+  rackup: config.ru
+  #log: /var/log/thin.log
+  #pid: /var/run/thin.pid
+  max_conns: 1024
+  timeout: 2
+  max_persistent_conns: 512
+  daemonize: true

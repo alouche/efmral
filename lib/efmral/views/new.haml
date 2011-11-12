@@ -1,0 +1,7 @@
+#box
+  %form#new_handler{ :action => "/secret", :method => "POST", :onSubmit => "return validateNewFrm(event);"}
+    %textarea#new_msg{ :name => "to_share", :onFocus => "if (this.value == this.defaultValue) { this.value = ''; }", :onBlur => "if (this.value == '') {this.value = this.defaultValue;}"}
+      Type in your secret...
+    %p
+    %input#new_key{:type => "textbox", :name => "enc_key", :value => "provide an encryption key (optional)", :onFocus => "if (this.value == this.defaultValue) { this.value = ''; }", :onBlur => "if (this.value == '') {this.value = this.defaultValue;}"}
+    %input#submit_button{:type => "submit", :value => "Share Secret"}

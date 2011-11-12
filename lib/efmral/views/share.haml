@@ -1,0 +1,11 @@
+#share_box
+  - viewed_at = @info.call
+  - if viewed_at == ''
+    %h3
+      You have created a secret, share this id/url
+      %a{:href => "/reveal/" + @ref }= @ref
+  - else
+    %h3
+      This secret has been viewed at
+      = viewed_at
+= partial( "new" )
