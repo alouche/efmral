@@ -106,7 +106,8 @@ You should have received a copy of the GNU General Public License along with efm
 [1]: http://efmral.alouche.net
 [2]: http://www.youtube.com/watch?v=rUROI-LCJX0
 [3]: http://en.wikipedia.org/wiki/XXTEA
-[4]: http://www.sinatrarb.com
-[5]: http://code.macournoyer.com/thin/
-[6]: http://haml-lang.com/
-[5]: http://datamapper.org
+[4]: www.ruby-lang.org/en/
+[5]: http://www.sinatrarb.com
+[6]: http://code.macournoyer.com/thin/
+[7]: http://haml-lang.com/
+[8]: http://datamapper.org
