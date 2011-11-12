@@ -1,0 +1,112 @@
+# efmral
+
+efmral - pronounced "e-phe-me-ral" is a small sinatra rake middleware application which allows the sharing of [encrypted (optional)] notes which are short lived.
+
+## Why?
+
+To provide a balance between simplicity and security.
+
+It is known that across coorporation, confidential informations are often communicated by email, chats which leave a trace log for anyone with rogue admin rights or a malicious attacker to retrieve this information at a later time.
+
+Demo [http://efmral.alouche.net][1] - Screencast [@youtube][2]
+
+## How does it work?
+
+efmral is a self hosted web based application which can deployped by anyone on their own private server. Once a note is created, a url/id is generated, which can in return be given to a user to display the shared note. Once the note is displayed, it is automatically deleted.
+
+A note can therefore never been seen more than once.
+
+Users are encouraged to use a key to automatically encrypt the note. Using encryption secures the note and prevents anyone having admin access to the efmral database to read the note prior to the intended user displaying it.
+
+## Security
+
+Since efmral deletes the entry once the note has been viewed, it is possible to identify whether a shared information has been compromised (if not seen by the intended user) and take action such as changing a password or remedy any previous actions.
+
+efmral allows as well to send encrypted messages to a user with whom a shared key was agreed on. Because the encryption and decryption is done by the client through javascript, no clear text information is ever passed through the LAN/WAN - making it therefore a safe way to communicate passwords to users.
+
+### Block TEA Encryption
+
+The Tiny Encryption Algorithm is used by efmral to provide lightweight but secure encryption of the blocks.
+
+Wikipedia Entry
+  [http://en.wikipedia.org/wiki/XXTEA][3]
+
+The javascript implementation of the algorithm by Chris Veness is used to avoid having to re-invente the wheel. The script encodes and decodes the characters into Base64 to not break the UTF-8 encoding.
+
+## Setup
+
+### Requirements
+
+* [Ruby][4]
+* [Sinatra][5]
+* [Thin][6]
+* [HAML][7]
+* [DataMapper][8]
+
+### Download
+
+Get the latest version
+
+    wget http://github.com/alouche/efmral/master -O efmral.zip
+
+### Installation
+
+The sqlite3 library is required to compile the native sqlite3 extension. To install the sqlite3 library of your distribution, issue:
+
+* Ubuntu/Debian: apt-get install libsqlite3-dev 
+* Centos/Redhat: yum install sqlite-devel.<arch>
+
+Unzip efmral.zip, change to the efmral directory and issue:
+
+  gem install bundler && bundle install
+
+### Customization
+
+Thin related configuration are to be set in config.yml
+
+### Running efmral
+
+In the efmral directory, issue:
+
+  rake start
+
+To stop efmral, issue:
+
+  rake stop
+
+## Development
+
+### Contribution
+
+efmral is still considered 'beta' and welcome contributions.
+
+You feel you could improve the CSS interface, HAML layout, JS scripts  or the general ruby stack, then
+
+* fork the repository
+* make changes
+* create test
+* submit a pull
+
+### ToDo
+
+A list of upcoming features
+
+* Add expiration to non-viewed items after specified time
+* Share short lived notes across multiple users
+* Admin page to control entries in the sqlite database and generic statistics
+
+## License
+
+efmral is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+efmral is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with efmral. If not, see <www.gnu.org/licenses/>.
+
+[1]: http://efmral.alouche.net
+[2]: http://www.youtube.com/watch?v=rUROI-LCJX0
+[3]: http://en.wikipedia.org/wiki/XXTEA
+[4]: http://www.sinatrarb.com
+[5]: http://code.macournoyer.com/thin/
+[6]: http://haml-lang.com/
+[5]: http://datamapper.org
